@@ -12,10 +12,10 @@ As an example, here is the randomAction method:
 @GET
 @Path("/note/random")
 public WOActionResults randomAction() throws Throwable {
-	Note note = Note.randomNote( editingContext() );
-	note.setUserRelationship( authenticatedUser() );
-	editingContext().saveChanges();
-	return response( note, ERXKeyFilter.filterWithAll() );
+    Note note = Note.randomNote( editingContext() );
+    note.setUserRelationship( authenticatedUser() );
+    editingContext().saveChanges();
+    return response( note, ERXKeyFilter.filterWithAll() );
 }
 }}}
 
