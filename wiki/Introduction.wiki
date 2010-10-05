@@ -9,7 +9,6 @@ Please take into consideration this is NOT supposed to be a final product. The i
 Requirements for you to compile and run this app are:
   * !WebObjects 5.3.3 (dunnow if it will run on 5.4)
   * Wonder frameworks (including ERRest). I'm using SVN revision 10908, anything newer than that should work fine.
-  * PostgreSQL DB. It should work with other DBs (it's WO, after all!) but any debugging needed on them is up to you.
   * XCode 3.2.4 with iPhone SDK 4.1 installed. You need to have an active developer license if you want to run the app on your physical device. Anyway, the simulator should do just fine.
 
 Now to the important stuff:
