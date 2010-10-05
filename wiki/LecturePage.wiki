@@ -59,3 +59,7 @@ public WOActionResults randomAction() throws Throwable {
 The `@GET` tag tells this action is available if the client uses the HTTP GET method to access it. `@Path` tells ERRest what is the URL you want to map this action to.
 
 == Exposing different keys according to context ==
+
+It's sometimes handy to expose different keys of an object in different situations, including keys whose value is generated on-the-fly, and is not mapped to a data storage column. There's an example of that in the [http://code.google.com/p/rest-notes/source/browse/trunk/WO/Sources/net/terminalapp/notes/rest/controllers/NoteController.java NoteController] class. The `indexAction` will expose the note creation date and a `contentPreview` key, which is a cropped version of the note content. This is enough for the notes table. When the user taps a note, the `showAction` method will be called exposing the full content of the note. [http://code.google.com/p/rest-notes/source/browse/trunk/WO/Sources/net/terminalapp/notes/rest/controllers/UserController.java UserController] uses the same technique for avoiding exposing the user's password hash.
+
+== Error handling ==
