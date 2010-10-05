@@ -9,14 +9,18 @@ You can see this in two places of the WO app. Check [http://code.google.com/p/re
 As an example, here is the randomAction method:
 
 {{{
-	@GET
-	@Path("/note/random")
-	public WOActionResults randomAction() throws Throwable {
-		Note note = Note.randomNote( editingContext() );
-		note.setUserRelationship( authenticatedUser() );
-		editingContext().saveChanges();
-		return response( note, ERXKeyFilter.filterWithAll() );
-	}
+@GET
+@Path("/note/random")
+public WOActionResults randomAction() throws Throwable {
+	Note note = Note.randomNote( editingContext() );
+	note.setUserRelationship( authenticatedUser() );
+	editingContext().saveChanges();
+	return response( note, ERXKeyFilter.filterWithAll() );
+}
 }}}
 
 The `@GET` tag tells this action is available if the client uses the HTTP GET method to access it. `@Path` tells ERRest what is the URL you want to map this action to.
+
+== Exposing different keys according to context ==
+
+== Authentication and account management ==
