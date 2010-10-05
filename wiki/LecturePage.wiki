@@ -1,0 +1,22 @@
+#summary Interesting stuff to look at
+
+== Non-standard actions ==
+
+REST applications usually expose resources using the typical set of actions (update, delete, show, etc). Of course, REST is all about flexibility, so you can add any kind of actions you want. ERRest has an awesome way to do this and map those actions to an URL.
+
+You can see this in two places of the WO app. Check [http://code.google.com/p/rest-notes/source/browse/trunk/WO/Sources/net/terminalapp/notes/rest/controllers/NoteController.java NoteController] and [http://code.google.com/p/rest-notes/source/browse/trunk/WO/Sources/net/terminalapp/notes/rest/controllers/UserController.java UserController] classes for the randomAction and loginAction methods.
+
+As an example, here is the randomAction method:
+
+{{{
+	@GET
+	@Path("/note/random")
+	public WOActionResults randomAction() throws Throwable {
+		Note note = Note.randomNote( editingContext() );
+		note.setUserRelationship( authenticatedUser() );
+		editingContext().saveChanges();
+		return response( note, ERXKeyFilter.filterWithAll() );
+	}
+}}}
+
+The `@GET` tag tells this action is available if the client uses the HTTP GET method to access it. `@Path` tells ERRest what is the URL you want to map this action to.
