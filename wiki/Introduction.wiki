@@ -14,5 +14,5 @@ Requirements for you to compile and run this app are:
   * XCode 3.2.4 with iPhone SDK 4.1 installed. You need to have an active developer license if you want to run the app on your physical device. Anyway, the simulator should do just fine.
 
 Now to the important stuff:
-  * InstallationInstructions - How to configure, compile and install REST Notes. Read this, because you need to make some changes for your environment.
-  * LecturePage - Some interesting stuff the app does.
+  * [InstallationInstructions How to configure, compile and run REST Notes]. Read this, because you need to make some changes for your environment.
+  * [LecturePage Solutions used to some of the common problems] like authentication or error handling.
