@@ -1,0 +1,5 @@
+#summary Notes about the iPhone client architecture
+
+= HTTPRiot =
+
+The iPhone client includes the [http://labratrevenge.com/httpriot/docs/ HTTPRiot library].
