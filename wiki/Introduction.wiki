@@ -1,0 +1,7 @@
+#summary Introduction to REST Notes
+
+= Introduction =
+
+REST Notes is a sample notes app. Notes are stored on a server, and exposed trough an WebObjects application using the ERRest framework. The iPhone application uses the exposed REST API to create users, login, create, read, edit and delete notes.
+
+Please take into consideration this is NOT supposed to be a final product. The interface is ugly, there may be a few bugs, and some stuff isn't as optimized as it can be. I wrote this simply to get the feeling of how to correctly write REST stuff, and make it available for the community.
