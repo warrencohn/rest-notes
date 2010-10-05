@@ -1,5 +1,4 @@
 #summary Interesting stuff to look at
-
 #sidebar TableOfContents
 
 == Authentication and account management ==
