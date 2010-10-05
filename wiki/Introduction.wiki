@@ -13,4 +13,4 @@ Requirements for you to compile and run this app are:
 
 Now to the important stuff:
   * [InstallationInstructions How to configure, compile and run REST Notes]. Read this, because you need to make some changes for your environment.
-  * [LecturePage Solutions used to some of the common problems] like authentication or error handling.
+  * [LecturePage Solutions used to some of the common problems] like authentication or error handling, and [ClientArchitecture some notes on the iPhone client architecture] you can re-use in your applications.
