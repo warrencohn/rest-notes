@@ -1,5 +1,4 @@
 #summary Instructions on how to correctly configure and compile REST Notes.
-#sidebar TableOfContents
 
 == WO Side ==
 
