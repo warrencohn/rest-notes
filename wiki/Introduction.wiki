@@ -5,3 +5,13 @@
 REST Notes is a sample notes app. Notes are stored on a server, and exposed trough an WebObjects application using the ERRest framework. The iPhone application uses the exposed REST API to create users, login, create, read, edit and delete notes.
 
 Please take into consideration this is NOT supposed to be a final product. The interface is ugly, there may be a few bugs, and some stuff isn't as optimized as it can be. I wrote this simply to get the feeling of how to correctly write REST stuff, and make it available for the community.
+
+Requirements for you to compile and run this app are:
+* WebObjects 5.3.3 (dunnow if it will run on 5.4)
+* Wonder frameworks (including ERRest). I'm using SVN revision 10908, anything newer than that should work fine.
+* PostgreSQL DB. It should work with other DBs (it's WO, after all!) but any debugging needed on them is up to you.
+* XCode 3.2.4 with iPhone SDK 4.1 installed. You need to have an active developer license if you want to run the app on your physical device. Anyway, the simulator should do just fine.
+
+Now to the important stuff:
+* InstallationInstructions - How to configure, compile and install REST Notes. Read this, because you need to make some changes for your environment.
+* LecturePage - Some interesting stuff the app does.
