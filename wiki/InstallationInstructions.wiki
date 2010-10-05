@@ -3,7 +3,6 @@
 == WO Side ==
 
   # Import the project into Eclipse.
-  # Open !NotesModel (in Resources) and adjust the Default DB connection to your database. You need to create an empty database too, of course.
   # Run the app and stop it to create a run configuration. To do that, right-click on the Application class and choose Run as > WOApplication.
   # Edit the run configuration and set a fixed WOPort for the application. This is convenient for having a fixed URL the iPhone can connect to.
 
