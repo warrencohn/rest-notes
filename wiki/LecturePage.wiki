@@ -1,5 +1,7 @@
 #summary Interesting stuff to look at
 
+#sidebar TableOfContents
+
 == Authentication and account management ==
 
 There are a few ways to do authentication using REST. I opted for a sessionless model, using HTTP basic authentication over SSL. Not having to deal with sessions and their expiration times in nice when using REST applications, as the clients may be used in very different scenarios. This way, clients can be very simple, without the added complexity of keeping and renewing a session ID.
