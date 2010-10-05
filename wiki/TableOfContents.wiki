@@ -1,3 +1,4 @@
   * [Introduction]
   * [InstallationInstructions Installation instructions]
   * [LecturePage Interesting stuff]
+  * [ClientArchitecture Client architecture notes]
