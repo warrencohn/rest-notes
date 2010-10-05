@@ -1,5 +1,4 @@
 #summary Introduction to REST Notes
-#sidebar TableOfContents
 
 = Introduction =
 
