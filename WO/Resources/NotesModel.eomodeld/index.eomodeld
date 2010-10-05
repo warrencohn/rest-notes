@@ -25,7 +25,7 @@
                         plugin = PostgresqlPlugIn; 
                         username = postgres; 
                     }; 
-                    prototypeEntityName = EOJDBCPostgresqlPrototypes; 
+                    prototypeEntityName = EOJDBCH2Prototypes; 
                 }; 
             }; 
         }; 

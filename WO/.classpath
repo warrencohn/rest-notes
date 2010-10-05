@@ -17,5 +17,6 @@
 	<classpathentry kind="con" path="WOFramework/ERRest"/>
 	<classpathentry kind="con" path="WOFramework/DerbyPlugIn"/>
 	<classpathentry kind="con" path="WOFramework/JavaMemoryAdaptor"/>
+	<classpathentry kind="con" path="WOFramework/H2PlugIn"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
