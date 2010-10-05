@@ -2,4 +2,8 @@
 
 = HTTPRiot =
 
-The iPhone client includes the [http://labratrevenge.com/httpriot/docs/ HTTPRiot library].
+The iPhone client includes the [http://labratrevenge.com/httpriot/docs/ HTTPRiot library] to handle the HTTP communication and result parsing. The source code of HTTPRiot itself was included, so that it can be easily changed.
+
+HTTPRiot architecture is a little crazy IMO. Usage is essentially based on a class, `HRRestModel`, which is used trough a bunch of static methods. This makes it a little hard to have different delegates and selectors to be called for different requests.
+
+To solve this, `HRRestModel` has been subclassed into a `GenericConnector` class, which contains some of the mechanics that are used by the application. `GenericConnector`, together with the `RESTOperationWrapper` wrapper class, introduces some flexibility on this, allowing for customized delegates and selectors. Also, `GenericConnector` provides default behavior for error management which can be tuned in any of the individual communication operations.
