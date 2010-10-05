@@ -1,6 +1,6 @@
 #summary Notes about the iPhone client architecture
 
-= HTTPRiot =
+=HTTPRiot=
 
 The iPhone client includes the [http://labratrevenge.com/httpriot/docs/ HTTPRiot library] to handle the HTTP communication and result parsing. The source code of HTTPRiot itself was included, so that it can be easily changed.
 
