@@ -18,7 +18,7 @@
 	NSString *json = [[user dictionaryForSerialization] JSONRepresentation];
 	NSDictionary *opts = [NSDictionary dictionaryWithObject:json forKey:@"body"];
 	RESTOperationWrapper *wrapper = [RESTOperationWrapper wrapperForDelegate:delegate andSelector:theSelector];
-	[[wrapper errorSelectors] setObject:NSStringFromSelector(errorSelector) forKey:[NSNumber numberWithInt:500]];
+	[wrapper addErrorHandler:errorSelector forCode:500];
 	[self postPath:@"/users.json" withOptions:opts object:wrapper];
 }
 
