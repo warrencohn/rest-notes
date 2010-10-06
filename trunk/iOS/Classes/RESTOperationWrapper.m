@@ -23,6 +23,14 @@
 	return wrapper;
 }
 
+- (void) addErrorHandler: (SEL) errorSelector forCode: (int) errorCode {
+	[[self errorSelectors] setObject:NSStringFromSelector( errorSelector ) forKey:[NSNumber numberWithInt:errorCode]];
+}
+
+- (SEL) errorHandlerForCode: (int) errorCode {
+	return NSSelectorFromString( [[self errorSelectors] objectForKey:[NSNumber numberWithInt:errorCode]] );
+}
+
 - (void) dealloc
 {
 	[self setObject:nil];

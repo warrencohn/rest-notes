@@ -26,11 +26,10 @@
 // Handle invalid responses, 404, 500, etc.
 + (void)restConnection:(NSURLConnection *)connection didReceiveError:(NSError *)error response:(NSHTTPURLResponse *)response object:(id)del {
 	NSInteger code = [error code];
-	NSMutableDictionary *dict = [del errorSelectors];
-	NSString* selectorName = [dict objectForKey:[NSNumber numberWithInt:code]];
+	SEL errorSelector = [del errorHandlerForCode:code];
 	
-	if( selectorName != nil ) {
-		[[del object] performSelector:NSSelectorFromString(selectorName) withObject:[[response allHeaderFields] objectForKey:@"X-Restnotes-Error"]]; 
+	if( errorSelector != nil ) {
+		[[del object] performSelector:errorSelector withObject:[[response allHeaderFields] objectForKey:@"X-Restnotes-Error"]]; 
 	} else if( code == 403 ) { 
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authentication error" message:@"Wrong user or password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
 		[alert show];

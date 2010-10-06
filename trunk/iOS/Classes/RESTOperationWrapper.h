@@ -20,5 +20,7 @@
 @property (nonatomic, retain) NSMutableDictionary *errorSelectors;
 
 + (RESTOperationWrapper*) wrapperForDelegate: (id) theObject andSelector: (SEL) theSelector;
+- (void) addErrorHandler: (SEL) errorSelector forCode: (int) errorCode;
+- (SEL) errorHandlerForCode: (int) errorCode;	
 
 @end
