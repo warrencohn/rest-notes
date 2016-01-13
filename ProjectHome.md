@@ -1,0 +1,3 @@
+This is a code sample of a simple distributed Notes application. Data is stored in a server, and served by an WebObjects application. The iPhone app consumes the data using REST-style communication.
+
+Please check the [Wiki introduction page](http://code.google.com/p/rest-notes/wiki/Introduction) for a more detailed description, system requirements, installation instructions, and some documentation.
